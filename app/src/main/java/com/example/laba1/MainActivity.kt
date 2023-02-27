@@ -15,15 +15,8 @@ class  MainActivity : AppCompatActivity() {
         bindingClass = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
         bindingClass.knopka1.setOnClickListener() {
-
-            if (bindingClass.knopka1.text == "Отобразить") {
-                bindingClass.knopka1.text = "Спрятать"
-                bindingClass.text1.isVisible = true
-            }
-            else {
-                bindingClass.knopka1.text = "Отобразить"
-                bindingClass.text1.isVisible = false
-            }
+            val text = bindingClass.text2.text
+            bindingClass.text1.text = text
         }
     }
 }
